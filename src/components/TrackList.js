@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import TrackInfoCard from './TrackInfoCard';
 import { getTopTracks } from '@/lib/spotifyGetters';
 
-const TrackList = ({time_period="medium_term", limit=10}) => {
+const TrackList = ({time_period="short_term", limit=10}) => {
     // this function assumes a functional spotifyApi
 
     const [topTracksData, setTopTracksData] = useState([]);

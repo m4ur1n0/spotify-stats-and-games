@@ -57,7 +57,7 @@ export default function Profile({  }) {
             <h1 className="font-bold text-2xl my-10">Tracks</h1>
 
             {/* <div className="flex flex-col justify-begin items-center w-[80%] max-h-[40vh] overflow-scroll border border-white "> */}
-                <TrackList time_period="long_term" limit={10} />
+                <TrackList time_period="short_term" limit={10} />
             {/* </div> */}
         </div>
     )

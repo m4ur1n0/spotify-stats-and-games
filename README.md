@@ -1,1 +1,1 @@
-Spotify game and stats viewer created with React.js, Next.js, TailwindCSS, and the Spotify API.
+Spotify game and stats viewer created with React.js, Next.js, TailwindCSS, and the Spotify API.d

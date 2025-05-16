@@ -21,7 +21,8 @@ export async function handleAuthRedirect() {
                 window.location.href = `/profile?user=${encodeURIComponent(JSON.stringify(data.user))}`;
 
             } else {
-                console.error("ERROR DURING AUTH! got bad response : ", data.error);
+                console.error("ERROR DURING AUTH! got bad response : ", JSON.stringify(data.error));
+                window.location.href = "/"; // just redirect back to login :'P
             }
 
         } catch (err) {

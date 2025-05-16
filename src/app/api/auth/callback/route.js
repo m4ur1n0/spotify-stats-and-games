@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import axios from "axios";
 import querystring from 'querystring';
 // import {spotifyApi} from '../../../../lib/spotify';
-import spotifyApi from "@/lib/spotify";
+// import spotifyApi from "@/lib/spotify";
 
 export async function GET(request) {
 
@@ -38,10 +38,13 @@ export async function GET(request) {
         );
 
         // console.log("RESPONSE CODE : " , response.code);
+        // entire resp
+        // console.log(`RESPOMNSE : \n${JSON.stringify(response)}`);
 
         // now we have posted the request
 
-        const {access_token, refresh_token} = response.data;
+        const {access_token, refresh_token, scope : grantedScopes } = response.data;
+        console.log(`Granted scopes : ${grantedScopes}`)
 
         // our spotify api token can now be used to get this user's data -- this route is run server-side -- can't set here
         // spotifyApi.setAccessToken(access_token);
